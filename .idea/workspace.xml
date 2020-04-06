@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ec8de2c0-34e4-4f25-8712-86b2140a0223" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="1a6OJVWKaKmJpY4x2ccZpOnRzw9" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/function/main.py" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Run main" type="PythonConfigurationType" factoryName="Python">
+      <module name="CatalogoPelis" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="POST_URL" value="https://script.google.com/macros/s/AKfycbw2vNhGfcSULRpuLrxu7eIcYCfa8ntE2SemqjFgxEC2o7HtXlk3/exec" />
+        <env name="WEBHOOK_ID" value="ddef176d-c28e-4bd4-b00f-d8ef8ecc08c8" />
+      </envs>
+      <option name="SDK_HOME" value="$PROJECT_DIR$/../env/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/function" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/function/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ec8de2c0-34e4-4f25-8712-86b2140a0223" name="Default Changelist" comment="" />
+      <created>1586052504264</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1586052504264</updated>
+      <workItem from="1586052505673" duration="2037000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="423" y="283" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586054539823">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state x="423" y="283" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1044@0.0.1920.1044" timestamp="1586054539823" />
+    <state x="698" y="296" key="EnvironmentVariablesDialog" timestamp="1586054537988">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state x="698" y="296" key="EnvironmentVariablesDialog/0.0.1920.1044@0.0.1920.1044" timestamp="1586054537988" />
+    <state x="743" y="278" key="FileChooserDialogImpl" timestamp="1586053200168">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state x="743" y="278" key="FileChooserDialogImpl/0.0.1920.1044@0.0.1920.1044" timestamp="1586053200168" />
+    <state width="1874" height="275" key="GridCell.Tab.0.bottom" timestamp="1586054542397">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state width="1874" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1044@0.0.1920.1044" timestamp="1586054542397" />
+    <state width="1874" height="275" key="GridCell.Tab.0.center" timestamp="1586054542396">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state width="1874" height="275" key="GridCell.Tab.0.center/0.0.1920.1044@0.0.1920.1044" timestamp="1586054542396" />
+    <state width="1874" height="275" key="GridCell.Tab.0.left" timestamp="1586054542395">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state width="1874" height="275" key="GridCell.Tab.0.left/0.0.1920.1044@0.0.1920.1044" timestamp="1586054542395" />
+    <state width="1874" height="275" key="GridCell.Tab.0.right" timestamp="1586054542396">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state width="1874" height="275" key="GridCell.Tab.0.right/0.0.1920.1044@0.0.1920.1044" timestamp="1586054542396" />
+    <state x="457" y="155" key="SettingsEditor" timestamp="1586052921803">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state x="457" y="155" key="SettingsEditor/0.0.1920.1044@0.0.1920.1044" timestamp="1586052921803" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/CatalogoPelis$Run_main.coverage" NAME="Run main Coverage Results" MODIFIED="1586053444259" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/function" />
+  </component>
+</project>

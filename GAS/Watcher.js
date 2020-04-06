@@ -1,0 +1,20 @@
+/**
+ * Function to execute everyday and updates the 
+ *
+ * @param {object} Time driven request event object
+ * @return {Void}
+ */
+function onTrigger(e) {
+  let scriptProperties = PropertiesService.getScriptProperties();
+  
+  let data = JSON.parse(scriptProperties.getProperty('channelResource'));
+      
+  let expiration = data['expiration'];
+  
+  let expirationDate = new Date(expiration);
+  
+  if(isTomorrow(expirationDate)) {
+    stopWatch();
+    initWatch();
+  }
+}
