@@ -4,6 +4,7 @@ function onOpen(e) {
       .createMenu('Generador de metadatos')
       .addItem('Actualizar nuevos', 'getMoviesFromFolder')
       .addItem('Actualizar todos', 'forceGetMoviesFromFolder')
+      .addItem('Actualizar fila seleccionada', 'getSelectedMovieMetadata')
       .addToUi();
 }
 
@@ -63,7 +64,7 @@ function getMoviesFromFolder() {
           toPush[11] = bestSearchResult['id'];
           toPush[12] = fileUrl;
           
-          let movieDetails = JSON.parse(getMovieDetails(movieID=bestSearchResult['id']));
+          let movieDetails = getMovieDetails(movieID=bestSearchResult['id']);
           
           if(movieDetails['release_date']) {
             toPush[1] = movieDetails['release_date'];
@@ -167,7 +168,7 @@ function forceGetMoviesFromFolder() {
           toPush[11] = bestSearchResult['id'];
           toPush[12] = fileUrl;
           
-          let movieDetails = JSON.parse(getMovieDetails(movieID=bestSearchResult['id']));
+          let movieDetails = getMovieDetails(movieID=bestSearchResult['id']);
           
           if(movieDetails['release_date']) {
             toPush[1] = movieDetails['release_date'];
@@ -222,4 +223,62 @@ function forceGetMoviesFromFolder() {
   let range = sheet.getRange(3, 1, toWrite.length, toWrite[0].length);
   range.setValues(toWrite);
   
+}
+
+function getSelectedMovieMetadata() {
+  let sheet = SpreadsheetApp.getActive().getSheetByName('Movies');
+  
+  let selectedRow = sheet.getActiveCell().getRow();
+  
+  let selectedMovieRange = sheet.getRange(selectedRow, 1, 1, sheet.getLastColumn());
+  
+  let values = selectedMovieRange.getValues();
+  
+  let TMDBId = values[0][11];
+  
+  let movieDetails = getMovieDetails(movieID=TMDBId);
+          
+  if(movieDetails['release_date']) {
+    values[0][1] = movieDetails['release_date'];
+  }
+  
+  if(movieDetails['poster_path']) {
+    values[0][3] = `${imageBaseUrl}${movieDetails['poster_path']}`;
+  }
+  
+  if(movieDetails['overview']) {
+    values[0][2] = movieDetails['overview'];
+  }
+  
+  if(movieDetails['belongs_to_collection']) {
+    values[0][4] = movieDetails['belongs_to_collection']['name'];
+  }
+  
+  if(movieDetails['credits']) {
+    if(movieDetails['credits']['cast']) {
+      values[0][5] = getMovieCast(movieDetails);
+    }
+    
+    if(movieDetails['credits']['crew']) {
+      values[0][6] = getMovieDirector(movieDetails);
+    }
+  }
+  
+  if(movieDetails['vote_average']) {
+    values[0][7] = movieDetails['vote_average'];
+  }
+  
+  if(movieDetails['id']) {
+    values[0][13] = `${tmdbBaseUrl}${movieDetails['id']}`;
+  }
+  
+  if(movieDetails['homepage']) {
+    values[0][14] = movieDetails['homepage'];
+  }
+  
+  if(movieDetails['imdb_id']) {
+    values[0][15] = `${imdbBaseUrl}${movieDetails['imdb_id']}`;
+  }
+  
+  selectedMovieRange.setValues(values);  
 }
