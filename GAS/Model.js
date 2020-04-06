@@ -71,7 +71,7 @@ function addMovie(id) {
     toPush[11] = bestSearchResult['id'];
     toPush[12] = file_url;
     
-    let movieDetails = JSON.parse(getMovieDetails(movieID=bestSearchResult['id']));
+    let movieDetails = getMovieDetails(movieID=bestSearchResult['id']);
     
     if(movieDetails['release_date']) {
       toPush[1] = movieDetails['release_date'];
