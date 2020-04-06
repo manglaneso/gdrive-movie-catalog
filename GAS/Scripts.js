@@ -79,3 +79,10 @@ function renameFiles() {
   }
   
 }
+
+function testThing() {
+  let file = DriveApp.getFileById('1BMeRPtLuAgqc-BVC8NcCfQLvd0_auSVT');
+  
+  Logger.log(file.getMimeType())
+  
+}

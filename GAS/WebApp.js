@@ -33,26 +33,30 @@ function doPost(e) {
           }          
         } else {
           if(newChanges[i]['changeType'] == 'file') {
-            // Es un archivo de video. NOS INTERESA
+            // Es un archivo de Drive. NOS INTERESA
             
             let file = DriveApp.getFileById(fileId);
             
-            let parents = file.getParents();
+            if(file.getMimeType().indexOf('video') > -1) {
+              // Es un vídeo. NOS INTERESA
+              let parents = file.getParents();
             
-            while(parents.hasNext()) {
-              let parent = parents.next();
-              
-              if(parent.getId() == carpetaPelisId) {
-                // Es un video de la carpeta de pelis. NOS INTERESA
-                Logger.log(fileId)
-                let movie = getMovie(fileId)
+              while(parents.hasNext()) {
+                let parent = parents.next();
                 
-                if(!movie) {
-                  addMovie(fileId)
-                }
-                
-                break;
-              } 
+                if(parent.getId() == carpetaPelisId) {
+                  // Es un video de la carpeta de pelis. NOS INTERESA
+                  Logger.log(fileId)
+                  let movie = getMovie(fileId)
+                  
+                  if(!movie) {
+                    addMovie(fileId)
+                  }
+                  
+                  break;
+                } 
+              }
+            
             }
           }
         }
