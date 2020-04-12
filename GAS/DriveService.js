@@ -94,7 +94,11 @@ function listChanges() {
 
   let res = UrlFetchApp.fetch(url, options);
 
-  let jsonResponse = JSON.parse(res.getContentText());
+  let contentText = res.getContentText();
+
+  console.log(contentText);
+
+  let jsonResponse = JSON.parse(contentText);
 
   if(jsonResponse['newStartPageToken']) {
     scriptProperties.setProperty('pageToken', jsonResponse['newStartPageToken'])

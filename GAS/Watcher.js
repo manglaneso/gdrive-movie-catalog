@@ -1,5 +1,5 @@
 /**
- * Function to execute everyday and updates the 
+ * Function to execute everyday updating the Google Drive Suscription to Push Notifications
  *
  * @param {object} Time driven request event object
  * @return {Void}
@@ -9,7 +9,7 @@ function onTrigger(e) {
   
   let data = JSON.parse(scriptProperties.getProperty('channelResource'));
       
-  let expiration = data['expiration'];
+  let expiration = parseInt(data['expiration']);
   
   let expirationDate = new Date(expiration);
   

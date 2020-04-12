@@ -33,6 +33,7 @@ function deleteMovie(id) {
   
   for(let movie in values) {
     if(values[movie][12].indexOf(id) > -1) {
+      console.log(`Borramos la peli ${values[movie[0]]}!`);
       sheet.deleteRow(parseInt(movie) + 1)
       break;
     }
@@ -116,6 +117,8 @@ function addMovie(id) {
     }
     
   }
+  
+  console.log('Introducimos nueva peli!');
   console.log(JSON.stringify(toPush))
   console.log(toPush.length);
   sheet.appendRow(toPush);
