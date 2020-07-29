@@ -28,6 +28,17 @@ function isTomorrow(date) {
 }
 
 /**
+ * Checks if a date is in the past
+ *
+ * @param {date} Timestamp to check
+ * @return {boolean} True if date is in the past, False if not
+ */
+function isInThePast(date) {
+  let today = new Date().getTime();
+  return today > date;  
+}
+
+/**
  * Gets the name of a file trimming the extension
  *
  * @param {string} name of the file with extension

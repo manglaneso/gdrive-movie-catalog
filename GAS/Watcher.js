@@ -16,5 +16,7 @@ function onTrigger(e) {
   if(isTomorrow(expirationDate)) {
     stopWatch();
     initWatch();
+  } else if(isInThePast(expiration)) {
+    initWatch();
   }
 }
